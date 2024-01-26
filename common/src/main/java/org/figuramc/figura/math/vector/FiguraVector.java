@@ -23,6 +23,8 @@ public abstract class FiguraVector<T extends FiguraVector<T, M>, M extends Figur
     public abstract T divide(T other);
     public abstract T reduce(T other);
     public abstract T scale(double factor);
+    public abstract T floor();
+    public abstract T ceil();
     public abstract double[] unpack();
 
     @SuppressWarnings("unchecked")
@@ -90,6 +92,9 @@ public abstract class FiguraVector<T extends FiguraVector<T, M>, M extends Figur
     public T toDeg() {
         return copy().scale(MathUtils.RAD_TO_DEG);
     }
+
+    public T floored() { return copy().floor(); }
+    public T ceiled() { return copy().ceil(); }
 
     public abstract int size();
     public abstract double index(int i);

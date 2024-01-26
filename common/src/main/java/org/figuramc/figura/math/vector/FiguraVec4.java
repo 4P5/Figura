@@ -449,21 +449,9 @@ public class FiguraVec4 extends FiguraVector<FiguraVec4, FiguraMat4> {
     }
 
     @LuaWhitelist
-    @LuaMethodDoc("vector_n.floored")
-    public FiguraVec4 floored() {
-        return copy().floor();
-    }
-
-    @LuaWhitelist
     @LuaMethodDoc("vector_n.ceil")
     public FiguraVec4 ceil() {
         return FiguraVec4.of(Math.ceil(x), Math.ceil(y), Math.ceil(z), Math.ceil(w));
-    }
-
-    @LuaWhitelist
-    @LuaMethodDoc("vector_n.ceiled")
-    public FiguraVec4 ceiled() {
-        return copy().ceil();
     }
 
     @LuaWhitelist
